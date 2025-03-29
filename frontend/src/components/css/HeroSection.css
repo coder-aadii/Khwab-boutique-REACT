@@ -1,0 +1,237 @@
+.hero-section{
+    height: 100vh;
+    margin-top: -65px;
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: -130px; */
+}
+/* Sale Banner Styles */
+.sale-banner {
+    background: linear-gradient(45deg, var(--pink), var(--light-pink));
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.sale-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.sale-text {
+    flex: 1;
+    text-align: left;
+}
+
+.sale-text h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    color: var(--dark-pink);
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+.sale-text p {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: #333;
+    margin: 5px 0 0;
+    animation: fadeInUp 1s ease-out 0.3s;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.time-block {
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out 0.6s;
+}
+
+.time-block span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-pink);
+    font-family: var(--font-text);
+}
+
+.time-block label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    font-family: var(--font-text);
+}
+
+/* Shop Now Button */
+.btn-shop-now {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--dark-pink);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.9s;
+}
+
+.btn-shop-now:hover {
+    background-color: rgb(195, 51, 75);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text {
+    position: relative;
+    z-index: 5;
+    /* Ensure the text is on top of particles */
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Behind the text but in front of the background */
+    pointer-events: none;
+    /* Ensure particles don't block user interactions */
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    font-family: "Great Vibes", cursive;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-text .btn {
+    padding: 1rem 2.5rem;
+    background-color: var(--dark-pink);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: rgb(195, 51, 75);
+    transform: scale(1.05);
+}
+
+@media (max-width: 786px) {
+    .sale-banner {
+        padding: 1.5rem 0;
+    }
+
+    .sale-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .sale-text {
+        margin-bottom: 10px;
+    }
+
+    .sale-text h2 {
+        font-size: 2rem;
+    }
+
+    .sale-text p {
+        font-size: 1.2rem;
+    }
+
+    .countdown-timer {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .time-block {
+        min-width: 70px;
+        padding: 0.8rem;
+    }
+
+    .time-block span {
+        font-size: 1.8rem;
+    }
+
+    .time-block label {
+        font-size: 0.8rem;
+    }
+
+    .btn-shop-now {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://res.cloudinary.com/deoegf9on/image/upload/v1743159262/hero-bg2_xzt50p.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background 0.5s ease;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /* Ensure particles stay within the hero section */
+}
+
+.hero .hero-text .btn {
+    width: 50%;
+    background-color: var(--dark-pink);
+}
+
+.hero .hero-text .btn:hover {
+    background-color: var(--dark-pink);
+    transform: scale(1.05);
+    color: white;
+}

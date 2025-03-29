@@ -1,0 +1,239 @@
+/* Global Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    background-color: var(--light-pink);
+    transition: background-color 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* Keep header above other content */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 120px;
+    margin-left: 15%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.search-container {
+    margin: 0 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px 15px;
+    border: 2px solid var(--dark-pink);
+    border-radius: 20px;
+    width: 200px;
+    font-family: var(--font-primary);
+}
+
+.search-container button {
+    background: var(--dark-pink);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-left: -35px;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: rgb(195, 51, 75);
+}
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 99;
+}
+
+/* Navbar links container */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    /* Center the items */
+}
+
+/* Individual list items */
+nav ul li {
+    margin-top: 2%;
+    margin-right: 2.5rem;
+    /* margin: 1.5rem; */
+    position: relative;
+    z-index: 1;
+    /* Ensure that the hover effect is applied on the correct layer */
+}
+
+/* Style for anchor tags */
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-pink);
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Ensure smooth transition */
+    padding-bottom: 2px;
+    /* Add some space at the bottom for the underline */
+}
+
+/* Hover effect and popup animation */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: var(--dark-pink);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1.5);
+    transform-origin: bottom left;
+}
+
+/* Popup effect */
+nav ul li a:hover {
+    color: rgb(195, 51, 75);
+    /* Change text color on hover */
+    transform: translateY(-5px) scale(1.5);
+    /* Slight upward movement and scaling */
+}
+
+/* Button Styles */
+.nav-link-button {
+    background: none;
+    border: none;
+    color: var(--dark-pink);
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: var(--dark-pink);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link-button:hover::after {
+    transform: scaleX(1.5);
+    transform-origin: bottom left;
+}
+
+.nav-link-button:hover {
+    color: rgb(195, 51, 75);
+    transform: translateY(-5px) scale(1.5);
+}
+
+.login-btn {
+    background-color: var(--dark-pink);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 25px;
+    border: 2px solid var(--dark-pink);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: var(--dark-pink);
+    transform: translateY(-2px);
+}
+
+/* Media query for screen width 786px or less */
+@media (max-width: 786px) {
+
+    /* Hide the navbar links and display the hamburger icon */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 99;
+    }
+
+    /* Style for the hamburger icon */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 100;
+        /* Ensure hamburger icon is on top */
+        padding: 10px;
+    }
+
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background-color: var(--dark-pink);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* Toggle nav when hamburger is clicked */
+    .hamburger.active+ul {
+        display: flex;
+    }
+
+    /* Style the navbar links for mobile view */
+    nav ul li {
+        margin: 1rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+}
