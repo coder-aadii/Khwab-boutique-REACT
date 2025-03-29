@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import NewArrivalsSection from '../components/NewArrivalsSection';
 import PopularProductsSection from '../components/PopularProductsSection';
@@ -14,7 +12,6 @@ import TestimonialsSection from '../components/TestimonialsSection';
 const Home = () => {
   return (
     <div className="home">
-      <Navbar />
       <main>
         <section id="hero">
           <HeroSection />
@@ -44,7 +41,6 @@ const Home = () => {
           <AboutUs />
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

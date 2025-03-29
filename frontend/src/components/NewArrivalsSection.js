@@ -13,7 +13,7 @@ const NewArrivalsSection = () => {
               <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1743163061/Gemini_Generated_Image_dn9t1dn9t1dn9t1d_jcuo6b.jpg" alt="New Arrival 1" />
               <h4>Designer Gown</h4>
               <p className="price">₹15,999</p>
-              <button className="btn-add-to-cart">Add to Cart</button>
+              <button className="custom-button">Add to Cart</button>
             </div>
           </div>
           <div className="col-md-3">
@@ -21,7 +21,7 @@ const NewArrivalsSection = () => {
               <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1743163061/Gemini_Generated_Image_dn9t1dn9t1dn9t1d_jcuo6b.jpg" alt="New Arrival 1" />
               <h4>Designer Gown</h4>
               <p className="price">₹15,999</p>
-              <button className="btn-add-to-cart">Add to Cart</button>
+              <button className="custom-button">Add to Cart</button>
             </div>
           </div>
           <div className="col-md-3">
@@ -29,7 +29,7 @@ const NewArrivalsSection = () => {
               <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1743163061/Gemini_Generated_Image_dn9t1dn9t1dn9t1d_jcuo6b.jpg" alt="New Arrival 1" />
               <h4>Designer Gown</h4>
               <p className="price">₹15,999</p>
-              <button className="btn-add-to-cart">Add to Cart</button>
+              <button className="custom-button">Add to Cart</button>
             </div>
           </div>
           <div className="col-md-3">
@@ -37,7 +37,7 @@ const NewArrivalsSection = () => {
               <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1743163061/Gemini_Generated_Image_dn9t1dn9t1dn9t1d_jcuo6b.jpg" alt="New Arrival 1" />
               <h4>Designer Gown</h4>
               <p className="price">₹15,999</p>
-              <button className="btn-add-to-cart">Add to Cart</button>
+              <button className="custom-button">Add to Cart</button>
             </div>
           </div>
           

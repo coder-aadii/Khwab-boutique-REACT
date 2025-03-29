@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import './css/Navbar.css'; // Fixed double slash in path
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -31,8 +32,7 @@ const Navbar = () => {
   // };
 
   const handleLogin = () => {
-    // Add your login modal logic here
-    console.log('Login modal opened');
+    navigate('/auth'); // Navigate to auth page
   };
 
   const handleSearch = (e) => {
